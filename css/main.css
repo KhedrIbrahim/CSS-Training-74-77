@@ -1,0 +1,156 @@
+hr{
+    margin: 20px auto;
+}
+/* TASK ONE */
+:root{
+    --backcolortone: #e22390;
+    --back2colortone: #1b99ea;
+    --back3colortone: #eda500;
+    --wordcolor: white;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.tone{
+    width: 50px;
+    height: 50px;
+    margin: 100px auto auto auto;
+    border-radius: 50%;
+    border: solid var(--backcolortone) 5px;
+    border-right: white solid 5px;
+    position: relative;
+    animation: rotate-div 1s linear infinite;
+}
+.tone::before{
+    content:"";
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border: solid 5px var(--back2colortone);
+    border-left: solid 5px white;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+.tone::after{
+    content:"";
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: solid 5px var(--back3colortone);
+    border-top: solid 5px white;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+.tone:hover{
+    animation-play-state: paused;
+}
+@keyframes rotate-div {
+    to{
+        transform: rotate(1turn);
+    }
+}
+/* TASK ONE */
+
+/* TASK TWO */
+:root{
+    --backcolortwo: #0894f6; 
+    --back2colortwo: #f9aa0b;
+    --back3colortwo: #000000;
+    --wordcolor: white;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.ttwo{
+    width: 50px;
+    height: 50px;
+    margin: 100px auto auto auto;
+    border-radius: 50%;
+    border: solid var(--backcolortwo) 5px;
+    border-right: white solid 5px;
+    position: relative;
+    transform-origin: center center;
+}
+.ttwo::before{
+    content:"";
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border: solid 5px var(--back2colortwo);
+    border-right: solid 5px white;
+    position: absolute;
+    top: -12.5px;
+    left: -12.5px;
+}
+.ttwo::after{
+    content:"";
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: solid 5px var(--back3colortwo);
+    border-right: solid 5px white;
+    position: absolute;
+    top: -20px;
+    left:-20px;
+}
+.ttwo,
+.ttwo::before,
+.ttwo::after{
+    animation: rotate-div paused linear infinite;
+}
+.ttwo{
+    animation-duration: 1s;
+}
+.ttwo::before{
+    animation-duration: 2s;
+}
+.ttwo::after{
+    animation-duration: 3s;
+}
+
+
+
+.ttwo:hover,
+.ttwo:hover::after,
+.ttwo:hover::before{
+    animation-play-state: running;
+}
+@keyframes rotate-div {
+    to{
+        transform: rotate(1turn);
+    }
+}
+/* TASK TWO */
+
+/* TASK THREE */
+body{
+    margin: 0px;
+    height: 100vh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+span{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(155, 155, 155);
+    border: solid black 5px;
+    border-right-color: transparent;
+    animation: span-rotate 1s infinite linear reverse;
+}
+@keyframes span-rotate {
+    to{
+        transform: rotate(1turn);
+    }
+}
+
+/* TASK THREE */
